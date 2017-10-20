@@ -1,7 +1,9 @@
-package com.example.cmd.shop;
+package com.example.cmd.shop.Activitys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.cmd.shop.R;
 
 public class MainActivity extends AppCompatActivity {
 
