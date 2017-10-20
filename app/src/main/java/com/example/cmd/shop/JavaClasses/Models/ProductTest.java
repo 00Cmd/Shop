@@ -4,12 +4,12 @@ package com.example.cmd.shop.JavaClasses.Models;
  * Created by cmd on 20.10.17.
  */
 
-public class Product {
+public class ProductTest {
     private String productId;
     private String title,description,imgString;
     private double price;
 
-    public Product(String title, String description, String imgString, double price) {
+    public ProductTest(String title, String description, String imgString, double price) {
         this.title = title;
         this.description = description;
         this.imgString = imgString;
