@@ -2,7 +2,7 @@ package com.example.cmd.shop.DbOps;
 
 import android.content.Context;
 
-import com.example.cmd.shop.JavaClasses.Models.ProductTest;
+import com.example.cmd.shop.JavaClasses.Models.Product;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,13 +20,13 @@ public class DbOps {
         this.mContext = xtx;
     }
 
-    public void AddProduct(ProductTest productTest) {
-        if (productTest != null) {
+    public void AddProduct(Product product) {
+        if (product != null) {
             DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("products");
             String productId = dbRef.push().getKey();
-            productTest.setProductId(productId);
-            dbRef.child(productId).setValue(productTest);
-            //TODO: Add seprate For imgUrl and modify ProductTest Model.
+            product.setProductId(productId);
+            dbRef.child(productId).setValue(product);
+            //TODO: Add seprate For imgUrl and modify Product Model.
 
         }
     }

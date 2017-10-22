@@ -1,15 +1,17 @@
 package com.example.cmd.shop.Activitys;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.cmd.shop.Fragments.ProductListFragment;
+import com.example.cmd.shop.Fragments.SingleFragmentActivity;
 import com.example.cmd.shop.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public Fragment createFragment() {
+        return ProductListFragment.newInstance();
     }
 }
