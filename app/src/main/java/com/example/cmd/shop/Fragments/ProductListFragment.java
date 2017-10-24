@@ -5,7 +5,9 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +47,6 @@ public class ProductListFragment extends Fragment {
         mProducts.add(product);
         mProducts.add(product2);
         mProducts.add(product3);
-
     }
 
     @Nullable
@@ -56,7 +57,6 @@ public class ProductListFragment extends Fragment {
         mBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         ProductAdapter adapter = new ProductAdapter(mProducts);
         mBinding.recyclerView.setAdapter(adapter);
-
         return mBinding.getRoot();
     }
 }
